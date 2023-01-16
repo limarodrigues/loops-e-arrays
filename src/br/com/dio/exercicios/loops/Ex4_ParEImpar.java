@@ -8,28 +8,34 @@ calcule e mostre a quantidade de números pares
 e a quantidade de números impares.
 */
 public class Ex4_ParEImpar {
+   
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner (System.in);
 
-        int quantNumeros;
-        int numero;
-        int quantPares = 0, quantImpares = 0;
+        System.out.println("Quantidade de Números: ");
+        int quantidadeDeNumeros = scan.nextInt();
 
-        System.out.println("Quantidade de números: ");
-        quantNumeros = scan.nextInt();
+        int quantidadePar = 0;
+        int quantidadeImpar = 0;
 
         int count = 0;
-        do {
-            System.out.println("Número: ");
-            numero = scan.nextInt();
+        int order = 1;
 
-            if (numero % 2 == 0 ) quantPares++;
-            else quantImpares++;
+        do {
+            System.out.println("Digite o " + order + "° número:");
+            int numero = scan.nextInt();
+
+            if (numero % 2 == 0) {
+                quantidadePar++;
+            } else {
+                quantidadeImpar++;
+            }
 
             count++;
-        } while(count < quantNumeros);
+            order++;
+        } while (count < quantidadeDeNumeros);
 
-        System.out.println("Quantidade Par: " + quantPares);
-        System.out.println("Quantidade Ímpar: " + quantImpares);
+        System.out.println("Quantidade de números pares: "+quantidadePar);
+        System.out.println("Quantidade de números ímpares: "+quantidadeImpar);
     }
 }
