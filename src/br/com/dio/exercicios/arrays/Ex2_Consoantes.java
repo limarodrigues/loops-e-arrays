@@ -37,8 +37,8 @@ public class Ex2_Consoantes {
             if ( consoante != null)
                 System.out.print(consoante + " ");
         }
-        System.out.println("Quantidade de consoantes: " + quantidadeConsoantes);
-        System.out.println(consoantes.length);
+        System.out.println("\nQuantidade de consoantes: " + quantidadeConsoantes);
+        System.out.println("Quantidade de letras: " + consoantes.length);
 
     }
 
